@@ -50,6 +50,9 @@ public class ProdutoService implements ProdutoServiceInterface {
             if(produto.getValor() != null){
                 newProduto.setValor(produto.getValor());
             }
+            if(produto.getTipo() != null){
+                newProduto.setTipo(produto.getTipo());
+            }
             return produtoRepository.save(newProduto);
         }
         return produto;
